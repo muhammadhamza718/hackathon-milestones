@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shareable Resume</h1>
+      <form id="resume-form">
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="Enter your username" required />
+
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" placeholder="Enter your fullname" required />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Education</legend>
+          <label for="education">Academic Background:</label>
+          <textarea
+            id="education"
+            placeholder="Your educational background"
+            rows="4"
+            required
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Work Experience</legend>
+          <label for="experience">Professional Experience:</label>
+          <textarea
+            id="experience"
+            placeholder="Your work experience"
+            rows="4"
+            required
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Skills</legend>
+          <label for="skills">Skills & Expertise:</label>
+          <textarea
+            id="skills"
+            placeholder="Your skills"
+            rows="4"
+            required
+          ></textarea>
+        </fieldset>
+
+        <button type="submit">Generate My Resume</button>
+      </form>
+      <!-- Dynamic and editable resume -->
+      <div id="resume-display" contenteditable="true">
+    </div>
+    <br>
+
+    <!-- Section for the Shareable link and download option -->
+     <div id="shareable-link-container" style="display: none;">
+      <h2>Shareable Link</h2>
+      <p>Here is your unique link to view or edit your resume:</p>
+      <a href="#" id="shareable-link" target="_blank"></a>
+      <br>
+      <button id="download-pdf"><b>Download as PDF</b></button>
+     </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
